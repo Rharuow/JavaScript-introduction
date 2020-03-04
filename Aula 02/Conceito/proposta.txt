@@ -1,0 +1,7 @@
+Proposta desse exercício é realizar uma operação básica.
+
+1 - Capturar um value de um button, através do mapeamento do DOM;
+2 - Mostrar na screen setando no value;
+3 - Salvar a operação a ser realizada;
+4 - Capturar um segundo value de um button, através do mapeamento do DOM;
+5 - Mostrar na screen setando no value;

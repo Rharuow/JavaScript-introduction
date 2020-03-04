@@ -1,0 +1,4 @@
+Proposta desse exercício é conhecer o DOM.
+
+1 - Capturar um elemento do DOM;
+2 - Mostrar esse elemento na tela da calculadora;
