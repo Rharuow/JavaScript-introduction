@@ -3,7 +3,7 @@ Principios para JavaScript
 1 - O que é DOM (Document Object Model)?
 2 - Tipagem, ECMAScript, TypeScript.
 3 - O que uma variável pode guardar?
-4 - Ambientes de uso.
+4 - Boas práticas.
 5 - O que é o V8?
 6 - Métodos nativos (map(), forEach(), filter(), push() e etc).
 7 - Conceitos de Objetos em JavaScript (JSON -> JavaScript Object Notation).
