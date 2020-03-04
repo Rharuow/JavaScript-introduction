@@ -1,26 +1,26 @@
-function getValue(value) {
-    
-}
+let numbers = []
+let operation
 
-
-const showElement = (value) => {
-
-    let input = document.querySelector("#screen")
-
-    return input.value = value
+const createNumber = (value) => {    
+    let screen = document.querySelector("#screen")
+    return screen.value += value
 
 }
 
-const operation = (num1, operation, num2) => {
+const operation = (nums, operation = "eq", funçao) => {
     switch(operation) {
         case "sum":
-            return showElement(num1 + num2)
+            return createNumber(nums[0] + nums[1])
         case "sub":
-            return showElement(num1 - num2)
+            return createNumber(nums[0] - nums[1])
         case "mul":
-            return showElement(num1 * num2)
+            return createNumber(nums[0] * nums[1])
         case "div":
-            return showElement(num1 / num2)
+            return createNumber(nums[0] / nums[1])
     }
+}
 
+const clean = () => {
+    let screen = document.querySelector("#screen")
+    screen.value = 0;
 }
