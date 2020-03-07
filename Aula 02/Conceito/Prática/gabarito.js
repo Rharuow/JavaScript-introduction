@@ -1,33 +1,51 @@
-let numbers = [null, null].fill(0)
-let operation
+let numbers = []
+let result = 0
+let screen 
 
-const createNumber = (value) => {    
-    numbers.forEach(num => console.log(num))
-    let screen = document.querySelector("#screen")
-    return screen.value += value
+function sum() {
+    numbers.push(parseInt(screen.value, 10))
+    result = numbers.reduce(function(accumulator, current) {
+        return accumulator + current
+    })
+    screen.value = null
 }
 
-const sum = (nums) => {
-    return createNumber(nums[0] + nums[1])
+function sub() {
+    numbers.push(parseInt(screen.value, 10))
+    result = numbers.reduce(function(accumulator, current) {
+        return accumulator - current
+    })
+    screen.value = result
 }
 
-const sub = (nums) => {
-    return createNumber(nums[0] + nums[1])
+function mul() {
+    numbers.push(parseInt(screen.value, 10))
+    result = numbers.reduce(function(accumulator, current) {
+        return accumulator * current
+    })
+    screen.value = result
 }
 
-const mul = (nums) => {
-    return createNumber(nums[0] + nums[1])
+function div() {
+    numbers.push(parseInt(screen.value, 10))
+    result = numbers.reduce(function(accumulator, current) {
+        return accumulator / current
+    })
+    screen.value = result
 }
 
-const div = (nums) => {
-    return createNumber(nums[0] + nums[1])
+function equals() {
+    screen = document.querySelector("#screen")
+    screen.value = result
 }
 
-const eq = (nums) => {
-    return createNumber(nums[0] + nums[1])
+function clean() {
+    screen = document.querySelector("#screen")
+    numbers = []
+    screen.value = null
 }
 
-const clean = () => {
-    let screen = document.querySelector("#screen")
-    screen.value = 0;
+function setValue(value, reset = false) {
+    screen = document.querySelector("#screen")    
+    reset ? screen.value = null : screen.value += value
 }
