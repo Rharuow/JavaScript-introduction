@@ -43,16 +43,16 @@
             </div>
             <div class="buttons operations-buttons ">
                 <div class="pair-buttons">
-                    <button onClick="sum()" class="btn btn-outline-danger" value="sum" id="button-sum">+</button>
-                    <button onClick="sub()" class="btn btn-outline-warning" value="sub" id="button-sub">-</button>
+                    <button onClick="operation(this.value)" class="btn btn-operation btn-outline-danger" value="sum" id="button-sum">+</button>
+                    <button onClick="operation(this.value)" class="btn btn-operation btn-outline-warning" value="sub" id="button-sub">-</button>
                 </div>
                 <div class="pair-buttons">
-                    <button onClick="mul()" class="btn btn-outline-danger" value="mul" id="button-mul">*</button>
-                    <button onClick="div()" class="btn btn-outline-warning" value="div" id="button-div">/</button>
+                    <button onClick="operation(this.value)" class="btn btn-operation btn-outline-danger" value="mul" id="button-mul">*</button>
+                    <button onClick="operation(this.value)" class="btn btn-operation btn-outline-warning" value="div" id="button-div">/</button>
                 </div>
                 <div class="pair-buttons">
-                    <button onClick="equals()" class="btn btn-outline-success" value="eq" id="button-eq">=</button>
-                    <button onClick="clean()" class="btn btn-outline-secondary" value="clean" id="button-clean">C</button>
+                    <button onClick="operation(this.value)" class="btn btn-operation btn-outline-secondary" value="clean" id="button-clean">C</button>
+                    <button onClick="operation(this.value)" class="btn btn-operation btn-outline-success" value="eq" id="button-eq">=</button>
                 </div>
             </div> 
         </div>

@@ -1,51 +1,46 @@
 let numbers = []
-let result = 0
 let screen 
 
-function sum() {
-    numbers.push(parseInt(screen.value, 10))
-    result = numbers.reduce(function(accumulator, current) {
-        return accumulator + current
-    })
-    screen.value = null
+
+function operation(op) {
+    if(numbers.length == 0) {
+        numbers.push(parseInt(screen.value, 10))
+        screen.value = null
+    } else {
+        screen.value != null ? numbers.push(parseInt(screen.value, 10)) : numbers.push(numbers[0], 10)
+        switch(op) {
+            case "sum":
+                screen.value = numbers[0] + numbers[1]
+                numbers = []
+                numbers[0] = parseInt(screen.value)
+                break;
+            case "sub":
+                screen.value = numbers[0] - numbers[1]
+                numbers = []
+                numbers[0] = parseInt(screen.value)
+                break;
+            case "mul":
+                screen.value = numbers[0] * numbers[1]
+                numbers = []
+                numbers[0] = parseInt(screen.value)
+                break;
+            case "div":
+                screen.value = numbers[0] / numbers[1]
+                numbers = []
+                numbers[0] = parseInt(screen.value)
+                break;
+            case "clean":
+                numbers = []
+                screen.value = 0
+                break;
+            case "eq":
+                operation(op)
+                break; 
+        }
+    }
 }
 
-function sub() {
-    numbers.push(parseInt(screen.value, 10))
-    result = numbers.reduce(function(accumulator, current) {
-        return accumulator - current
-    })
-    screen.value = result
-}
-
-function mul() {
-    numbers.push(parseInt(screen.value, 10))
-    result = numbers.reduce(function(accumulator, current) {
-        return accumulator * current
-    })
-    screen.value = result
-}
-
-function div() {
-    numbers.push(parseInt(screen.value, 10))
-    result = numbers.reduce(function(accumulator, current) {
-        return accumulator / current
-    })
-    screen.value = result
-}
-
-function equals() {
-    screen = document.querySelector("#screen")
-    screen.value = result
-}
-
-function clean() {
-    screen = document.querySelector("#screen")
-    numbers = []
-    screen.value = null
-}
-
-function setValue(value, reset = false) {
+function setValue(value) {
     screen = document.querySelector("#screen")    
-    reset ? screen.value = null : screen.value += value
+    screen.value == "0" ? screen.value = value : screen.value += value
 }
