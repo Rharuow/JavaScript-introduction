@@ -1,0 +1,11 @@
+Caracteristicas gerais:
+
+1 - Fracamente tipado
+    *Existem variáveis sem valor e são consideradas "undefined"
+    *TypeScript --> Javascript tipado.
+
+2 - Dinamicamente tipado
+    *Muda o tipo conforme é declarado.
+
+Páginas WEB dinâmicas
+
