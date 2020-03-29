@@ -7,8 +7,14 @@ let odds  = document.getElementById("odd")
 
 function add() {
     let liNova = document.createElement("li")
+
+    // itens.push(input.value)
     
-    itens.push(parseInt(input.value, 10))
+    // console.log("itens String ==> ", itens)
+
+    itens.push(parseInt(input.value, 10)) //push add element
+
+    // console.log("itens int ==> ", itens)
 
     escreverNoHTML(itens,liNova,lista)
 
