@@ -1,0 +1,9 @@
+#input {
+    width: 70%;
+    margin: 50px 0 50px 15%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+}
