@@ -9,24 +9,38 @@
 </head>
 <body onload="start()">
     
-    <input type="number" id="input" placeholder="DIGITE UM NÚMERO">
+    <input onChange="checkValue(this.value)" value="" type="number" id="input" placeholder="DIGITE UM NÚMERO">
 
     <div class="buttons">
-        <button class="btn btn-success" onclick="add()">Salvar</button>
-        <button class="btn btn-danger" onclick="drop()">Deletar ultimo</button>
-        <button class="btn btn-info" onclick="dobrar()">Dobre valores</button>
-        <button class="btn btn-warning" onclick="total()">Somatória</button>
+        <button class="btn btn-success" onclick="add()">Push</button>
+        <button class="btn btn-danger" onclick="drop()">Pop</button>
+        <button class="btn btn-info" onclick="dobrar()">Map</button>
+        <button class="btn btn-warning" onclick="total()">Reduce</button>
+        <button class="btn btn-secondary" onclick="odd()">Filter</button>
     </div>
-    
-    <ol id="lista">
+    <div class="lists">
+        <div class="list">
+            <h1>Lista Original</h1>
+            <ul id="lista">
 
-    </ol>
+            </ul>
+        </div>
+        <div class="list">
+            <h1>Lista Duplicada</h1>
+            <ul id="dobro">
 
-    <ol id="novaLista">
+            </ul>
+        </div>
+        <div class="list">
+            <h1 id="somatorio"></h1>
+        </div>
+        <div class="list">
+            <h1>Impares</h1>
+            <ul id="odd">
 
-    </ol>
-
-
+            </ul>
+        </div>
+    </div>
 
     <script src="example.js"></script>
     <script src="example2.js"></script>
